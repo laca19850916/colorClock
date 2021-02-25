@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by laca19850916 (http://jsbin.com/somiriq/14/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin;
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet" type="text/css">
+  </title>
+<style id="jsbin-css">
+#html, body{
+  height: 100%;
+  
+}
+#clock{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 68px;
+  margin-top: -34px;
+}
+
+</style>
+</head>
+<body>
+  <div id="clock">12:13:14</div>
+
+
+<script id="jsbin-javascript">
+function colorClock(){
+// változók
+var date = new Date();
+var hours = date.getHours();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+
+// minden 2 karakter legyen!
+if (hours <10) {
+  hours = '0' + hours;
+}
+if (minutes <10){
+  minutes = '0'+ minutes;
+}
+if (seconds < 10) {
+  seconds = '0' + seconds;
+}
+
+var clockFace=hours + ':' + minutes + ':' + seconds;
+
+
+//összekapcsolás
+document.getElementById('clock').innerHTML = clockFace;
+  
+  setTimeout(function() {
+  colorClock();
+}, 1000);
+}
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
